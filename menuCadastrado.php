@@ -21,7 +21,6 @@
             </li>
             <li><a href="#">Doe Agora</a></li>
             <li><a href="#">Minha Area</a></li>
-            flsmndlfnsdlfnsldfbhksdlfhbjsdgf
         </ul>
         </div>
 </head>
