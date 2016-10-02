@@ -22,7 +22,6 @@
             <li><a href="#">Doe Agora</a></li>
             <li><a href="#">Minha Area</a></li>
         </ul>
-                aq 
         </div>
 </head>
 <body>
