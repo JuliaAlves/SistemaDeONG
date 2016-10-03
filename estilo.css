@@ -1,0 +1,90 @@
+body {
+    background-color: white;
+    padding: 0;
+}
+.clearfix:after{
+    content: '.';
+    display: block;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.clearfix{
+    margin-left: 0%;
+    margin-top: 0%;
+}
+.menu,
+.sub-menu {
+    list-style: none;
+}
+.sub-menu {
+    background: #6ADAD4;
+}
+.menu a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 0%;
+}
+.menu li {
+    position: relative;
+    margin-top: 0.6%;
+}
+.menu > li {
+    float: left;
+}
+.menu > li:hover {
+    background: #5ccbc5;
+     transition-duration: 0.3s;
+}
+.menu li:hover > .sub-menu {
+    display: block;
+}
+.sub-menu {
+    display: none;
+    position: absolute;
+    min-width: 150px;
+}
+.sub-menu li:hover {
+    background: #5ccbc5;
+     transition-duration: 0.3s;
+}
+.sub-menu .sub-menu {
+    top: 0;
+    left: 0;
+
+}
+
+.menu-container
+{
+    margin-top: 0%;
+    background-color: #6ADAD4;
+    height: 6%;
+}
+
+.opcao{
+    margin-left: 43%;
+}
+#cadastro{
+    background-color: #FF0066;
+    border-radius: 10px;
+}
+
+.slide{
+    display: none;
+}
+
+.slide-container
+{
+    margin-left: 35%;
+    margin-top: 10%;
+}
