@@ -2,6 +2,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="estilo.css">
+<link rel="icon" href="icone.png" />
         <div id="menu" class="menu-container">
         <div class="opcao">
         <ul class="menu clearfix">
