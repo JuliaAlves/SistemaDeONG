@@ -1,0 +1,92 @@
+h2{
+	font-family: "Microsoft MHei";
+	font-size: 20px;
+	text-align: center;
+    color: #ff0066;
+}
+
+select{
+	position: absolute;
+	left: 42%;
+    font-family: "Microsoft MHei";
+    top: 82%;
+}
+
+input{
+	position: absolute;
+	left: 42%;
+}
+
+img{
+    position: absolute;
+    top: 18%;
+	width: 25%;
+    left: 8%;
+}
+
+#cadastro{
+	position: absolute;
+	left: 34%;
+	top: 25%;
+	font-family: "Microsoft MHei";
+}
+
+.botao{
+    position: absolute;
+    top: 115%;
+    align-content: center;
+    font-family:"Microsoft MHei";
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #ff0066;
+    width: 18%;
+    height: 18%;
+    text-align: center;
+    border-color:#ff0066;
+    border-radius: 10px;
+}
+
+#renda1{
+    position: absolute;
+    top: 46%;
+	left: 45%;
+}
+
+#renda2{
+   position: absolute;
+   top: 53%;
+   left: 45%; 
+}
+
+#renda3{
+   position: absolute;
+   top: 60%;
+   left: 45%;
+}
+
+#f1{
+    position: absolute;
+    top: 46%;
+	left: 45%;
+}
+
+#f2{
+   position: absolute;
+   top: 53%;
+   left: 45%; 
+}
+
+#f3{
+   position: absolute;
+   top: 60%;
+   left: 45%;
+}
+
+#doador{
+    position: absolute;
+    top: 28%;
+	width: 15%;
+    left: 15%; 
+}
+
