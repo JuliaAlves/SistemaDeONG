@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+?>
 <html>
 <head>
 <meta charset="utf-8">
@@ -20,7 +22,11 @@
                 </ul>
             </li>
             <li><a href="#">Doe Agora</a></li>
-            <li><a href="#">Minha Area</a></li>
+            <?php 
+                $opcao=$_SESSION['opcao'];            
+                
+                echo "<li><a href='pagina".$opcao.".php'>Minha Area</a></li>"
+            ?>
         </ul>
         </div>
 </head>
