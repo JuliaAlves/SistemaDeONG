@@ -23,6 +23,6 @@
             <input type="submit" value="Enviar" class="botao">    
 			</form>
 		</div>
-		<img src="cadastro.png"></img>
+		<img src="cadastro.png"></img> gsngdnags
 	</body>
 </html>
