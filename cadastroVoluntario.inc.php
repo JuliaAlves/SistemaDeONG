@@ -1,11 +1,7 @@
 <html>
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="estiloCadastro.css">
-	</head>
+	 <?php include 'menu.inc.php' ?>
 	<body>
-        <?php include 'menu.inc.php' ?>
-		<div id="cadastro">
+		<div id="cadastro2">
 			<h2>Voluntário(a), preencha os seguintes campos para efetuar o cadastro</h2>
 			<form>
 			<label>Nome completo: </label><input type="text">

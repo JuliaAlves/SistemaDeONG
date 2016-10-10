@@ -1,5 +1,5 @@
 <?php
     session_start();
-    include 'menu.inc.php'
-    include 'home.inc.php'
+    require_once 'menu.inc.php';
+    require_once 'home.inc.php';
 ?>

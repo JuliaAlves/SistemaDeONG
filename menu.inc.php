@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="estilo.css">
-<link rel="icon" href="icone.png" />
+<link rel="icon" href="icone.png">
         <div id="menu" class="menu-container">
         <div class="opcao">
         <ul class="menu clearfix">
@@ -26,9 +26,9 @@
                     <form action="validarAcesso.php" method="post" name="frm_logar">
                     <li>Usuário:<input type=text name="login" required></li>
                     <li>Senha: <input type=password name="senha" required></li>
-                        <li><input type=submit value="Logar"></form></li>
+                        <li><input type=submit value="Logar" name="btn_1"></form></li>
                 </ul></li>
-            <li><a href="#" id="cadastro">Cadastre-se</a></li>
+            <li><a href="cadastro.php" id="cadastro">Cadastre-se</a></li>
         </ul>
         </div>
         </div>

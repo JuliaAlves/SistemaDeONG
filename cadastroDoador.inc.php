@@ -1,11 +1,7 @@
 <html>
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="estiloCadastro.css">
-	</head>
+	 <?php include 'menu.inc.php' ?>
 	<body>
-        <?php include 'menu.inc.php' ?>
-		<div id="cadastro">
+		<div id="cadastro2">
 			<h2>Doador(a), preencha os seguintes campos para efetuar o cadastro</h2>
 			<form>
 			<label>Nome completo: </label><input type="text">
@@ -19,7 +15,7 @@
                 <input type="radio" name="r" value="2"><div id="f2">Mensal</div><br>
                  <input type="radio" name="r" value="3"><div id="f3">Anual</div><br>  
             <br>    
-            <label>RG: </label><input type="number" min="0">
+            <label>RG: </label><input type="text" numberonly min="0">
 			<br>
 			<br>   
             <label>Email: </label><input type="text">
