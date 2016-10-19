@@ -59,7 +59,16 @@ class Conexao {
 
 
      private function sql_error($sql) {
-            echo sqlsrv_error($this->con) . '<br>';
-            die('error: ' . $sql);
-    } //fim sql_error
+            die( print_r( sqlsrv_errors(), true));
+    } 
+       
+    public function insert($sql){
+        $this-> execSQL($sql);
+
+        if ($this-> stmt)
+            return true;
+        else 
+            return false;
+    }
+    //fim sql_error
 } //fim da classe conexao

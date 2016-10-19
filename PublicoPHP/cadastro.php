@@ -8,14 +8,15 @@
 		<div id="cadastro2">
 			<h2>Preencha os seguintes campos para prosseguir o cadastro</h2>
 			<form action="cadastrar.php" method="post" name="frm_cadastro">
-			<label>Nome de usuário: </label><input type="text">
+			<label>Nome de usuário: </label><input type="text" name="usuario">
 			<br>
 			<br>
-			<label>Senha: </label><input type="password">
+			<label>Senha: </label><input type="password" name="senha">
 			<br>
 			<br>
 			<label>O que você é?</label>
-				<select>
+				<select name="opcao">
+					<option>Selecione</option>
 					<option>Carente</option>
 					<option>Voluntário</option>
 					<option>Doador</option>

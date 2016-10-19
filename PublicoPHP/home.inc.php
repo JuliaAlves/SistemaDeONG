@@ -20,7 +20,7 @@
 
             x[index-1].style.display = "block";
 
-        setTimeout(passarImagem, 9000); 
+        setTimeout(passarImagem, 3000); 
 }
 </script>
 

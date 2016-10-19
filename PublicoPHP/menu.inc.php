@@ -13,7 +13,8 @@
                     <li><a href="#">Voluntariado</a></li>
                     <li><a href="#">Doações</a></li>
                     <li><a href="#">Distribuições</a></li>
-                </ul></li>
+                </ul>
+            </li>
             <li><a href="#">Fale conosco</a>
                 <ul class="sub-menu clearfix">
                     <li><a href="#">Localização</a></li>
@@ -23,11 +24,13 @@
             <li><a href="#">Doe Agora</a></li>
             <li><a href="#">Login</a>
                 <ul class="sub-menu clearfix">
-                    <form action="validarAcesso.php" method="post" name="frm_logar">
-                    <li>Usuário:<input type=text name="login" required></li>
-                    <li>Senha: <input type=password name="senha" required></li>
-                        <li><input type=submit value="Logar" name="btn_1"></form></li>
-                </ul></li>
+                    <li><form action="validarAcesso.php" method="post">
+                    Usuário:<input type=text name="login" id="loginMenu" required></li>
+                    <li>Senha: <input type=password name="senha" id="senhaMenu" required></li>
+                    <br>
+                    <li><input type=submit value="Logar" name="btn_1"></form></li>
+                </ul>
+            </li>
             <li><a href="cadastro.php" id="cadastro">Cadastre-se</a></li>
         </ul>
         </div>

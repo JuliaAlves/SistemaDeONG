@@ -158,19 +158,19 @@ img{
 
 #f1{
     position: absolute;
-    top: 46%;
+    top: 41%;
     left: 45%;
 }
 
 #f2{
    position: absolute;
-   top: 53%;
+   top: 48%;
    left: 45%; 
 }
 
 #f3{
    position: absolute;
-   top: 60%;
+   top: 54%;
    left: 45%;
 }
 
@@ -179,4 +179,14 @@ img{
     top: 28%;
     width: 15%;
     left: 15%; 
+}
+
+#loginMenu, #senhaMenu{
+    color: white;
+    background-color: transparent;
+    width: 80%;
+    height: 150%;
+    border-color: #ff0066;
+    border-radius: 5px;
+    border-width: 1px;
 }
