@@ -55,7 +55,8 @@ public class Funcionario implements Serializable {
     @Column(name = "telefone")
     private String telefone;
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "funcionario")
-    private Usuarios usuarioFuncionario;
+    private String senha;
+
 
     public Funcionario() {
     }
@@ -64,17 +65,29 @@ public class Funcionario implements Serializable {
         this.matricula = matricula;
     }
 
-    public Funcionario(Integer matricula, String nome, String endereco, String rg, String cpf, String telefone) {
+    public Funcionario(Integer matricula, String nome, String endereco, String rg, String cpf, String telefone, String senha) {
         this.matricula = matricula;
         this.nome = nome;
         this.endereco = endereco;
         this.rg = rg;
         this.cpf = cpf;
         this.telefone = telefone;
+        this.senha=senha;
     }
 
-    public Integer getMatricula() {
-        return matricula;
+    public int getMatricula() {
+        return this.matricula;
+    }
+    
+    public String getSenha(){
+      return this.senha;
+    }
+       
+    public void setSenha(String s)throws Exception{
+        if (s==null)
+         throw new Exception("Parametro nulo");
+
+       this.senha=s;
     }
 
     public void setMatricula(Integer matricula) {
@@ -82,7 +95,7 @@ public class Funcionario implements Serializable {
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public void setNome(String nome) {
@@ -90,43 +103,35 @@ public class Funcionario implements Serializable {
     }
 
     public String getEndereco() {
-        return endereco;
+        return this.endereco;
     }
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
 
-    public String getRg() {
-        return rg;
+    public String getRG() {
+        return this.rg;
     }
 
-    public void setRg(String rg) {
+    public void setRG(String rg) {
         this.rg = rg;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCPF() {
+        return this.cpf;
     }
 
-    public void setCpf(String cpf) {
+    public void setCPF(String cpf) {
         this.cpf = cpf;
     }
 
     public String getTelefone() {
-        return telefone;
+        return this.telefone;
     }
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
-    }
-
-    public Usuarios getUsuarioFuncionario() {
-        return usuarioFuncionario;
-    }
-
-    public void setUsuarioFuncionario(Usuarios usuarioFuncionario) {
-        this.usuarioFuncionario = usuarioFuncionario;
     }
 
     @Override

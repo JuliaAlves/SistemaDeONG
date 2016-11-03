@@ -1,20 +1,10 @@
 package funcionariosjava;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author u16182
- */
 public class DAOs
 {
     private static MeuPreparedStatement bd;
 
-    private static Usuarios usuarios;
+    private static Funcionarios funcionarios; 
     //um como esse para cada classe DAO
 
     static
@@ -23,10 +13,10 @@ public class DAOs
         {
             DAOs.bd = new MeuPreparedStatement (
                       "com.microsoft.sqlserver.jdbc.SQLServerDriver",
-                      "jdbc:sqlserver://regulus:1433;databasename=BDGRUPO12",
+                      "jdbc:sqlserver://regulus:1433;databasename=BDGRUPO12", 
                       "BDGRUPO12", "BDGRUPO12");
 
-            DAOs.usuarios = new Usuarios ();
+            DAOs.funcionarios= new Funcionarios();
             //um como esse para cada classe DAO
         }
         catch (Exception erro)
@@ -36,14 +26,15 @@ public class DAOs
         }
     }
 
-    public MeuPreparedStatement getBD ()
+    public static MeuPreparedStatement getBD ()
     {
         return DAOs.bd;
     }
 
-    public Usuarios getLivros ()
+    
+    public Funcionarios getFuncionarios ()
     {
-        return DAOs.usuarios;
+        return DAOs.funcionarios;
     }
-    //um como esse para cada classe DAO
+//um como esse para cada classe DAO
 }
