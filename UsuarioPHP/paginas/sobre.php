@@ -15,18 +15,18 @@
           <center><h1 class="sobre">Sobre nós</h1></center>
           <br>
           <br>
-          <p class="p"> &nbsp; &nbsp; Liderados por Júlia Arruda e Larissa de Sena, a iniciativa "Amigos do Bem" que leva às famílias do sertão nordestino roupas, alimentos, brinquedos, entre outras coisas, tornou-se um trabalho de transformação, com inúmeros projetos educacionais e sustentáveis que hoje oferece auxílio à vida de milhares de pessoas.
+          <p class="p">Liderados por Júlia Arruda e Larissa de Sena, a iniciativa "Amigos do Bem" que leva às famílias do sertão nordestino roupas, alimentos, brinquedos, entre outras coisas, tornou-se um trabalho de transformação, com inúmeros projetos </p>
+                  <img src="../images/quemsomos.jpg" class="img1">
+          <p class="p">educacionais e sustentáveis que hoje oferece auxílio à vida de milhares de pessoas.
           Todos os dias chegam doações dos mais diversos lugares do Brasil. As equipes de voluntários recuperam, quando necessário, e embalam as doações recebidas para que cheguem ao destino em perfeitas condições de uso. </p>
 
         </article>
       </section>
       <section>
-        <br>
-        <br>
        <div id="owl-demo">
           
         <div class="item"><img src="../images/teste1.jpg" alt="Owl Image" class="owl"></div>
-        <div class="item"><img src="../images/teste2.jpg" alt="Owl Image" class="owl"></div>
+        <div class="item"><img src="../images/teste4.jpg" alt="Owl Image" class="owl"></div>
         <div class="item"><img src="../images/teste3.jpg" alt="Owl Image" class="owl"></div>
         <div class="item"><img src="../images/teste4.jpg" alt="Owl Image" class="owl"></div>
         <div class="item"><img src="../images/teste5.jpg" alt="Owl Image" class="owl"></div>
