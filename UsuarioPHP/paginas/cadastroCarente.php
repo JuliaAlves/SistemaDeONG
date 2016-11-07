@@ -10,10 +10,11 @@
       <br><br><br>
       <label>Renda:</label>
       <br><br>
-                <input type="radio" id="renda1" name="r" value="1"><div id="renda">Entre R$50  e R$200</div><br>
-                <input type="radio" id="renda2" name="r" value="2"><div id="renda">Entre R$200 e R$500</div><br>
-                <input type="radio" name="r" id="renda3" value="3"><div id="renda">Entre R$500 e R$800</div><br>
+                <input type="radio" id="renda1" name="renda" value="1"><div id="renda">Entre R$50  e R$200</div><br>
+                <input type="radio" id="renda2" name="renda" value="2"><div id="renda">Entre R$200 e R$500</div><br>
+                <input type="radio" name="renda" id="renda3" value="3"><div id="renda">Entre R$500 e R$800</div><br>
       <br>
+      <label>Endereço: </label><input type="text" name="endereco" class="input">
       <label>RG: </label><input type="number" min="0" name="RG" class="input">
       <br><br><br>    
             <label>Email: </label><input type="email" name="email" class="input">

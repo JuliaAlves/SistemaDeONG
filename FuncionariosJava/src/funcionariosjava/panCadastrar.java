@@ -14,7 +14,7 @@ private Funcionarios dao;
     /**
      * Creates new form panCadastrar
      */
-    public panCadastrar() {
+    public panCadastrar(Funcionario f) {
         initComponents();
         dao = new Funcionarios();
 
@@ -170,7 +170,7 @@ private Funcionarios dao;
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-       /* try{
+       try{
             Funcionario func;
 
             func = new Funcionario(Integer.parseInt(txtMatricula.getText()), txtNome.getText(),
@@ -182,11 +182,10 @@ private Funcionarios dao;
 
             dao.novoFuncionario(func);
         }
-        catch(Exception erro){
-            erro.printStackTrace();
+        catch(Exception erro){ 
             javax.swing.JOptionPane.showMessageDialog(this, erro,
-                this.getTitle(), javax.swing.JOptionPane.ERROR_MESSAGE);
-        }*/
+                "ONG", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
 

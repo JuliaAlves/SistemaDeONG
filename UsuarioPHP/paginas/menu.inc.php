@@ -14,7 +14,7 @@
 <div class="wrapper row1">
   <header id="header" class="clear">
     <div id="hgroup">
-      <h1><a href="home.php">Amigos do Bem</a></h1>
+      <h1><a href="home.php" class="tHome">Amigos do Bem</a></h1>
       <h2>Juntos somos mais!</h2>
     </div>
     <nav>
@@ -23,8 +23,15 @@
         <li><a href="sobre.php">Sobre</a></li>
         <li><a href="#">Como Ajudar</a></li>
         <li><a href="#">Doe Agora</a></li>
-        <li><a href="Login.php">Login</a></li>
-        <li class="last"><a href="cadastro.php">Cadastrar</a></li>
+        <?php 
+          if (isset($_GET['logado']))
+           echo "<li><a href='".$_SESSION['opcao'].".php'>Minha Area</a></li>";
+        else {
+          echo "<li><a href='Login.php'>Login</a></li>";
+          echo "<li class='last'><a href='cadastro.php'>Cadastrar</a></li>"; 
+        }
+        ?>
+ 
       </ul>
     </nav>
   </header>

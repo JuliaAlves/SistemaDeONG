@@ -12,13 +12,11 @@
 
         $sql="INSERT INTO Usuario VALUES ('$usuario','$senha','$opcao')";
         $inseriu=$obj_con->insert($sql);
-		print_r($_POST);
 		$_SESSION['opcao']=$opcao;
 		$_SESSION['usuario']=$usuario;
 	}
 
 		if ($_SESSION['opcao']=='Doador'){
-			echo "oi";
 			include "cadastroDoador.php";
 			if( isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['endereco'])
 				&& isset($_POST['frequencia']) && isset($_POST['RG']) && isset($_POST['telefone'])){
@@ -41,7 +39,7 @@
 		}
 
 	    else if ($_SESSION['opcao']=='Carente'){
-			include "cadastroCarente.inc.php";
+			include "cadastroCarente.php";
 	           if (isset($_POST['nome'])&&isset($_POST['email'])&& isset($_POST['endereco'])&&
 					isset($_POST['renda'])&&isset($_POST['RG'])&&isset($_POST['telefone'])){
 	                    
@@ -62,7 +60,7 @@
 
 	            
 		else if($_SESSION['opcao']=='Voluntário'){
-			include "cadastroVoluntario.inc.php";
+			include "cadastroVoluntario.php";
 	            if (isset($_POST['nome'])&&isset($_POST['email'])&& isset($_POST['RG'])&&isset($_POST['telefone'])){
 	                $nome=$_POST['nome'];
 					$email=$_POST['email'];

@@ -13,6 +13,7 @@ body{
 
 
 
+
 .clear:after{
 	content:"."; 
 	display:block; 
@@ -72,7 +73,6 @@ img{
     width: 285.4%;
     height: 200%;
 	top: 50%;
-    left:5%;
 }
 
 .slide-container
@@ -175,7 +175,6 @@ label{
 	height: 20em !important;
 }
 
-
 /*----------------------------------------------HTML 5 Overrides-------------------------------------*/
 
 address, article, aside, figcaption, figure, footer, header, nav, section{display:block; margin:0; padding:0;}
@@ -253,3 +252,6 @@ blockquote:after, q:after{content:' „'; font-size:26px; line-height:0;}
 
 #footer{padding:20px 0;}
 #footer p{margin:0; padding:0;}
+.tHome{
+	color:#FF9900; 
+}

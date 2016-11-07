@@ -12,18 +12,34 @@ import javax.swing.event.ChangeEvent;
  * @author u16182
  */
 public class FormPrincipal extends javax.swing.JFrame {
-
+    private Funcionario func;
+    private Funcionarios dao;
     private final panAlterarSenha panAlterarSenha;
     private final panCadastrar panCadastrar;
+    private final panCarentes panCarentes;
    // private Funcionarios dao;
     
-    public FormPrincipal(int matriculaAtual){       
+    public FormPrincipal(int matriculaAtual) throws Exception{       
         initComponents();
-        //dao = new Funcionarios(); 
-        panCadastrar= new panCadastrar();
+        try{
+            dao= new Funcionarios();
+            MeuResultSet resultado= dao.getFuncionario(matriculaAtual);
+            
+            func=new Funcionario (matriculaAtual, resultado.getString("nome"),
+                 resultado.getString("Endereco"), resultado.getString("RG"),
+                 resultado.getString("CPF"), resultado.getString("telefone"),
+                 resultado.getString("senha"));
+        }
+        catch(Exception erro){
+            throw new Exception("Erro ao construir Funcionario");
+        }
+        panCarentes= new panCarentes(func);
+        this.panPrincipal.addTab("Carentes",panCarentes);
+                
+        panCadastrar= new panCadastrar(func);
         this.panPrincipal.addTab("Cadastrar Novo Funcinario", panCadastrar);
         
-        panAlterarSenha = new panAlterarSenha(matriculaAtual);
+        panAlterarSenha = new panAlterarSenha(func);
         this.panPrincipal.addTab("Alterar Minha Senha", panAlterarSenha);
         
        
@@ -46,7 +62,6 @@ public class FormPrincipal extends javax.swing.JFrame {
         panPrincipal = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFont(new java.awt.Font("Microsoft MHei", 0, 12)); // NOI18N
@@ -78,19 +93,6 @@ public class FormPrincipal extends javax.swing.JFrame {
         );
 
         panPrincipal.addTab("Curriculos Disponíveis", jPanel2);
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 654, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 446, Short.MAX_VALUE)
-        );
-
-        panPrincipal.addTab("Carentes Cadastrados", jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -151,7 +153,6 @@ public class FormPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane panPrincipal;
     // End of variables declaration//GEN-END:variables

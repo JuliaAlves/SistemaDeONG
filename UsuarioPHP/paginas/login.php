@@ -3,6 +3,7 @@
 		require_once 'menu.inc.php';
 	?>
 	<div class="divLogin">
+		<?php echo (isset($_GET['cadastro'])) ? "<p id='mensagem'>Usuario ou senha inválidos.</p>" : ""; ?>
 		<form action="validarAcesso.php" method="post">
 			<br><br><br>
 			<h2 class="titloLogin">Digite as informações para entrar na sua conta</h2>
