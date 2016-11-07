@@ -1,21 +1,18 @@
 <html>
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="styles/layout.css" type="text/css">
-	</head>
+
 	<body>
         <?php include 'menu.inc.php' ?>
 		<div id="cadastro2">
 			<h2 class="title">Preencha os seguintes campos para prosseguir o cadastro</h2>
 			<br><br><br>
 			<form action="cadastrar.php" method="post" name="frm_cadastro">
-			<label>Nome de usuário: </label><input type="text" name="usuario">
+			<label>Nome de usuário: </label><input type="text" name="usuario" class="input">
 			<br>
 			<br>
-			<label>Senha: </label><input type="password" name="senha">
+			<label>Senha: </label><input type="password" name="senha" class="input">
 			<br>
 			<br>
-			<label>O que você é?</label>
+			<label>O que você é..?</label>
 				<select name="opcao">
 					<option>Selecione</option>
 					<option>Carente</option>
@@ -25,6 +22,12 @@
             <input type="submit" value="Prosseguir" class="botao">    
 			</form>
 		</div>
-		<img src="../images/cadastro.png" class="imgCadastro"> 
+		<img src="../images/icone.png" class="imgCadastro"> 
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="wrapper row3">
+          <footer id="footer" class="clear">
+            <p class="fl_left">Copyright &copy; 2016 - Todos os direitos reservados - <a href="home.php">Amigos do Bem</a></p>
+          </footer>
+        </div>
 	</body>
 </html>

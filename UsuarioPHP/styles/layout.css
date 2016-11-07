@@ -5,11 +5,13 @@ html{
 body{
 	margin:0;
 	padding:0;
-	font-size:15px;
+	font-size:16px;
 	font-family:"Microsoft MHei";
 	color:#979797;
 	background-color:#FFFFFF;
 }
+
+
 
 .clear:after{
 	content:"."; 
@@ -65,10 +67,11 @@ img{
 }
 
 .slide{
+	position: relative;
     display: none;
     width: 285.4%;
     height: 200%;
-	
+	top: 50%;
     left:5%;
 }
 
@@ -79,9 +82,9 @@ img{
 }
 
 select{
-	margin-left: 3%;
-    font-family: Georgia, "Times New Roman", Times, serif;
-   	width: 155px;
+	margin-left: 2.9%;
+    font-family: "Microsoft MHei";;
+   	width: 150px;
 	height: 25px;
 	color: #979797;
 }
@@ -93,13 +96,18 @@ input{
 	height: 25px;
 
 }
+
+.input{
+	margin-left: 10%;
+
+}
+
 .botao{
     margin-top: 3%;
-    margin-left: 16%;
-    align-content: center;
+    margin-left: 11%;
     font-family: "Microsoft MHei";
     color: #FF9900;
-    font-size: 20px;
+    font-size: 22px;
     background-color: transparent;
     width: 120px;
     height: 50px;
@@ -112,8 +120,8 @@ input{
 }
 
 #cadastro2{
-	margin-left: 19.5%;
-	margin-top: 5%;
+	margin-left: 30%;
+	margin-top: 8%;
 }
 
 label{
@@ -122,8 +130,8 @@ label{
 
 .imgCadastro{
     position: absolute;
-    top: 25%;
-    left: 47%;
+    top: 35%;
+    left: 50%;
 }
 
 .divTransparente{
@@ -161,9 +169,12 @@ label{
 }
 
 .owl{
-	width: 15em !important;
-	height: 10em !important;
+	border: 3px solid;
+	border-color: white;
+	width: 40em !important;
+	height: 20em !important;
 }
+
 
 /*----------------------------------------------HTML 5 Overrides-------------------------------------*/
 
@@ -189,12 +200,8 @@ div.wrapper{display:block; width:960px; margin:0 auto; padding:0; text-align:lef
 
 nav ul{margin:0; padding:0; list-style:none;}
 
-h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:20px; font-weight:bold; font-style:normal; line-height:normal; text-transform:uppercase;}
+h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:20px; font-weight:bold; font-style:normal; line-height:normal; text-transform:uppercase; color: #FF9900;}
 
-.sobre{
-	font-size: 25px;
-	color:#FF9900;
-}
 
 address{font-style:normal;}
 
@@ -214,7 +221,7 @@ blockquote:after, q:after{content:' „'; font-size:26px; line-height:0;}
 
 #header #hgroup{padding:20px 0 0 0; float:left;}
 #header #hgroup h1, #header #hgroup h2{font-weight:normal; text-transform:none;}
-#header #hgroup h1{font-size:36px;}
+#header #hgroup h1{font-size:45px; color: #FF9900}
 #header #hgroup h2{font-size:13px;}
 
 #header nav{display:block; float:right; margin:20px 0 0 0; padding:20px 0;}

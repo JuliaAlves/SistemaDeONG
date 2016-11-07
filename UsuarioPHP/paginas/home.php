@@ -5,9 +5,13 @@
   <div id="container" class="clear">
     <div class="slide-container">
       <img src="../images/Home1.jpg" class="slide"></img>
+      <img src="../images/Home2.jpg" class="slide"></img>
+      <img src="../images/Home3.jpg" class="slide"></img>
       <img src="../images/Home4.jpg" class="slide"></img>
-      <img src="../images/Home1.jpg" class="slide"></img>
-      <img src="../images/Home4.jpg" class="slide"></img>
+      <img src="../images/Home5.jpg" class="slide"></img>
+      <img src="../images/Home6.jpg" class="slide"></img>
+      <img src="../images/Home7.jpg" class="slide"></img>
+
     </div>
     <script type="text/javascript">
         var index = 0;
@@ -37,7 +41,7 @@
       <section>
         <article>
           <h2>Sobre nós</h2>
-          <p>Liderados por Júlia Arruda e Larissa de Sena, a iniciativa "Amigos do Bem" que leva às famílias do sertão nordestino roupas, alimentos, brinquedos, entre outras coisas, tornou-se um trabalho de transformação, com inúmeros projetos </p>
+          <p>&nbsp;Liderados por Júlia Arruda e Larissa de Sena, a iniciativa "Amigos do Bem" que leva às famílias do sertão nordestino roupas, alimentos, brinquedos, entre outras coisas, tornou-se um trabalho de transformação, com inúmeros projetos </p>
                     <img src="../images/quemsomos.jpg" class="img1">
           <p>educacionais e sustentáveis que hoje oferece auxílio à vida de milhares de pessoas.
           Todos os dias chegam doações dos mais diversos lugares do Brasil. As equipes de voluntários... </p>

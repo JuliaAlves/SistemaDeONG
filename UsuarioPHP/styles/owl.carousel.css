@@ -78,3 +78,7 @@
   width: 100%;
   height: auto;
 }
+
+.owl-item {
+	margin: 0px 50px !important;
+}

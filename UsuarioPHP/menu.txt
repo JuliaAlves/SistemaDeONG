@@ -1,0 +1,9 @@
+#menu{
+	position: relative;
+	left: 0%;
+	right: 100%;
+	top: 0%;
+	height: 20%;
+    background: #27B3EE;
+
+}

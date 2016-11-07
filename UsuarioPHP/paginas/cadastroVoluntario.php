@@ -1,3 +1,4 @@
+<?php include 'menu.inc.php' ?>
 <html>
 <div id="cadastro2">
       <h2>Voluntário(a), preencha os seguintes campos para efetuar o cadastro</h2>
