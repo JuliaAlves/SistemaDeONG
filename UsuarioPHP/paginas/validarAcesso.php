@@ -8,14 +8,15 @@ if (isset($_POST['login'])) {
     
     $obj_con = new Conexao;
     $dados = $obj_con->select("SELECT * FROM Usuario WHERE login='".$logForm."' AND senha='".$senForm."'");
-   	$_SESSION['opcao']=$dados[2];
         
 	    if(empty($dados)){
 	    	header('Location:login.php?cadastro="NAO"');
 	    }
 	    else{
 	    	$_SESSION['usuario']=$dados[0]['login'];
-	    	header('Location:index.php?logado="SIM"');
+	    	header('Location:home.php?');
+	    	$_SESSION['logado']="SIM";
+	    	   	$_SESSION['opcao']=$dados[2];
 	    }	    
 }
 ?>

@@ -130,7 +130,9 @@ public class Funcionario implements Serializable {
         return this.telefone;
     }
 
-    public void setTelefone(String telefone) {
+    public void setTelefone(String telefone)throws Exception{
+        if(telefone==null)
+            throw new Exception("Paremetro nulo");
         this.telefone = telefone;
     }
 

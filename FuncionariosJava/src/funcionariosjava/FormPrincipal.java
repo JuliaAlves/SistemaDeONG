@@ -41,7 +41,7 @@ public class FormPrincipal extends javax.swing.JFrame {
         
         panAlterarSenha = new panAlterarSenha(func);
         this.panPrincipal.addTab("Alterar Minha Senha", panAlterarSenha);
-        
+                
        
         
         this.panPrincipal.addChangeListener((ChangeEvent ce)  -> {

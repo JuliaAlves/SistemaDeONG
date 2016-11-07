@@ -1,5 +1,5 @@
 <?php
-    session_start();
-    require_once 'menu.inc.php';
-    require_once 'home.php';
+    include "home.php";
+    $_SESSION['logado']="NAO";
+    $_SESSION['opcao']='';
 ?>
