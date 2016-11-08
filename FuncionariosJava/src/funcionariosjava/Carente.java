@@ -95,7 +95,10 @@ public class Carente implements Serializable {
         return this.telefone;
     }
 
-    public void setTelefone(String telefone) {
+    public void setTelefone(String telefone)throws Exception{
+        if (email==null)
+         throw new Exception("Parametro nulo"); 
+        
         this.telefone = telefone;
     }
 

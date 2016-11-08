@@ -18,9 +18,27 @@ public class Carentes {
              resultado = (MeuResultSet)DAOs.getBD().executeQuery();
              resultado.first();
         }
-        catch(Exception erro){
+        catch(SQLException erro){
           throw new Exception ("Erro ao verificar carentes");
         }
         return resultado.getInt("QUANTOS");
     }
+    
+    public MeuResultSet getCarentes() throws Exception{
+        MeuResultSet resultado = null;
+        try{
+            String sql= "SELECT * FROM Carente";
+            DAOs.getBD().prepareStatement(sql);
+            resultado = (MeuResultSet)DAOs.getBD().executeQuery ();
+        }
+        catch(SQLException erro){
+            throw new Exception ("Erro ao recuperar livros");
+        }
+        return resultado;
+    }
+    
+    public Carente getCarente(String rg)throws Exception{
+        
+    }
+    
 }
