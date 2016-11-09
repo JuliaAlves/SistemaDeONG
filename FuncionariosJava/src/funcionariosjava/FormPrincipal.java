@@ -37,7 +37,7 @@ public class FormPrincipal extends javax.swing.JFrame {
         this.panPrincipal.addTab("Carentes",panCarentes);
                 
         panCadastrar= new panCadastrar(func);
-        this.panPrincipal.addTab("Cadastrar Novo Funcinario", panCadastrar);
+        this.panPrincipal.addTab("Cadastrar Novo Funcionario", panCadastrar);
         
         panAlterarSenha = new panAlterarSenha(func);
         this.panPrincipal.addTab("Alterar Minha Senha", panAlterarSenha);
@@ -46,6 +46,8 @@ public class FormPrincipal extends javax.swing.JFrame {
         
         this.panPrincipal.addChangeListener((ChangeEvent ce)  -> {
             panCadastrar.atualizar();
+            panCarentes.atualizar();
+            panAlterarSenha.atualizar();
         }); 
     }
 
@@ -64,6 +66,7 @@ public class FormPrincipal extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("ONG");
         setFont(new java.awt.Font("Microsoft MHei", 0, 12)); // NOI18N
 
         panPrincipal.setName("abas"); // NOI18N

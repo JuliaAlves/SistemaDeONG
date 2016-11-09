@@ -289,6 +289,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Direcionar Doa&#xe7;&#xe3;o"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDoarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

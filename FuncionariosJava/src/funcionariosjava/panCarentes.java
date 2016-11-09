@@ -8,6 +8,7 @@ package funcionariosjava;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -32,6 +33,15 @@ Carentes dao;
         }
    
         
+    }
+    
+    public void atualizar(){
+        txtNomeCarente.setText("");
+        txtTelefoneCarente.setText("");
+        txtRendaCarente.setText("");
+        txtRGCarente.setText("");
+        txtEmailCarente.setText("");
+        cbxCarentes.setSelectedIndex(0);
     }
     
 
@@ -118,6 +128,11 @@ Carentes dao;
         lblTotalDoacao.setText("jLabel11");
 
         btnDoar.setText("Direcionar Doação");
+        btnDoar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDoarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -214,9 +229,28 @@ Carentes dao;
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbxCarentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxCarentesActionPerformed
-       
-        lblNumeroDoacao.setText("" + cbxCarentes.getSelectedIndex());
+        if(cbxCarentes.getSelectedIndex()!=0)  
+            try{
+                lblNumeroDoacao.setText("" + cbxCarentes.getSelectedIndex());
+                txtNomeCarente.setText(dao.getCarente(cbxCarentes.getSelectedIndex()).getNome());
+                txtTelefoneCarente.setText(dao.getCarente(cbxCarentes.getSelectedIndex()).getTelefone());
+                txtRendaCarente.setText(dao.getCarente(cbxCarentes.getSelectedIndex()).getRenda());
+                txtRGCarente.setText(dao.getCarente(cbxCarentes.getSelectedIndex()).getRG());
+                txtEmailCarente.setText(dao.getCarente(cbxCarentes.getSelectedIndex()).getEmail());
+            }
+            catch(Exception erro){
+                JOptionPane.showMessageDialog(this, "Erro ao procuarar Carente", "ONG", JOptionPane.ERROR_MESSAGE);
+                atualizar();
+            }
+        else{
+            atualizar();
+        }
+            
     }//GEN-LAST:event_cbxCarentesActionPerformed
+
+    private void btnDoarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoarActionPerformed
+        
+    }//GEN-LAST:event_btnDoarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

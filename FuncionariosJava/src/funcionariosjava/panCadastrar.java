@@ -25,6 +25,12 @@ private Funcionarios dao;
        {
         MeuResultSet resultado=dao.selecionaUltimo();
         txtMatricula.setText("" + (resultado.getInt("matricula")+1));
+        txtNome.setText("");
+        txtRG.setText("");
+        txtEndereco.setText("");
+        txtCPF.setText("");
+        txtSenhaProv.setText("");
+        txtTelefone.setText("");
        }
        catch(Exception erro){
            erro.printStackTrace();
@@ -181,6 +187,7 @@ private Funcionarios dao;
             throw new Exception("Informações já cadastradas");
 
             dao.novoFuncionario(func);
+            atualizar();
         }
         catch(Exception erro){ 
             javax.swing.JOptionPane.showMessageDialog(this, erro,

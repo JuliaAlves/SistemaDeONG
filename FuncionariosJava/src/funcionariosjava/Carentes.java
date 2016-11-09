@@ -37,8 +37,25 @@ public class Carentes {
         return resultado;
     }
     
-    public Carente getCarente(String rg)throws Exception{
-        
+    public Carente getCarente(int cod)throws Exception{
+        Carente carente= null;
+        try{
+            String sql= "SELECT * FROM Carente WHERE codCarente=?";
+            DAOs.getBD().prepareStatement(sql);
+            DAOs.getBD().setInt(1, cod);
+            MeuResultSet resultado = (MeuResultSet)DAOs.getBD().executeQuery ();
+            resultado.first();
+            carente= new Carente(resultado.getString("nome"),
+                                 resultado.getString("rg"),
+                                 resultado.getString("email"),
+                                 resultado.getString("telefone"),
+                                 resultado.getString("renda"));
+        }
+        catch(SQLException erro){
+         throw new Exception ("Erro ao procurar carente");
+        }
+
+        return carente;
     }
     
 }

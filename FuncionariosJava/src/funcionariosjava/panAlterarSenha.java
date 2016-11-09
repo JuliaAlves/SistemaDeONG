@@ -36,7 +36,12 @@ public class panAlterarSenha extends javax.swing.JPanel {
            throw new Exception("Erro ao verificar funcionario");
         }
     }
-
+    
+    public void atualizar(){
+        txtCSenhaNova.setText("");
+        txtSenhaNova.setText("");
+    }
+            
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -138,6 +143,7 @@ public class panAlterarSenha extends javax.swing.JPanel {
         if (txtSenhaNova.getText().equals(txtCSenhaNova.getText())){
             dao.alterarSenha(txtSenhaNova.getText(),this.func.getMatricula() );
             JOptionPane.showMessageDialog(this, "Sua senha foi alterada!", "ONG", JOptionPane.ERROR_MESSAGE);
+            atualizar();
         }
         else
             JOptionPane.showMessageDialog(this, "As senhas estão diferentes", "ONG", JOptionPane.ERROR_MESSAGE);
