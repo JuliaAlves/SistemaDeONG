@@ -1,5 +1,5 @@
 <?php
-    include "home.php";
+	session_start();
     $_SESSION['logado']="NAO";
-    $_SESSION['opcao']='';
+    include "home.php";
 ?>

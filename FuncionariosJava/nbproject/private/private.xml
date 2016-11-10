@@ -14,12 +14,13 @@
         <group>
             <file>file:/Z:/WEB/ProjetoONG/FuncionariosJava/src/funcionariosjava/Carente.java</file>
             <file>file:/Z:/WEB/ProjetoONG/FuncionariosJava/src/funcionariosjava/Carentes.java</file>
-            <file>file:/Z:/WEB/ProjetoONG/FuncionariosJava/src/funcionariosjava/formDoacoes.java</file>
             <file>file:/Z:/WEB/ProjetoONG/FuncionariosJava/src/funcionariosjava/panCarentes.java</file>
             <file>file:/Z:/WEB/ProjetoONG/FuncionariosJava/src/funcionariosjava/FormPrincipal.java</file>
             <file>file:/Z:/WEB/ProjetoONG/FuncionariosJava/src/funcionariosjava/Funcionarios.java</file>
+            <file>file:/Z:/WEB/ProjetoONG/FuncionariosJava/src/funcionariosjava/Doacoes.java</file>
             <file>file:/Z:/WEB/ProjetoONG/FuncionariosJava/src/funcionariosjava/DAOs.java</file>
             <file>file:/Z:/WEB/ProjetoONG/FuncionariosJava/src/funcionariosjava/FormLogin.java</file>
+            <file>file:/Z:/WEB/ProjetoONG/FuncionariosJava/src/funcionariosjava/panAlterarSenha.java</file>
         </group>
     </open-files>
 </project-private>

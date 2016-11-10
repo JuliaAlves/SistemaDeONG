@@ -48,24 +48,12 @@ create table Doacao(
 	fequenciaDoacao varchar(50) not null
 )
 
-create table funcionarioCarente(
+create table DoacaoCarente(
 	codDoacaoCarente int identity(1,1) primary key,
 	codCarente int not null,
 	constraint fkCarentefuncionarioCarente foreign key(codCarente) references Carente(codCarente),
-	matricula int not null,
-	constraint fkMatricula foreign key(matricula) references Funcionario(matricula),
-	codDoacao int not null, 
-	constraint fkcodDoacao foreign key(codDoacao) references Doacao(codDoacao),
+	valor money not null,
 	dataTransferencia datetime not null
-)
-
-create table funcionarioDoador(
-	codDoador int identity(1,1) not null,
-	constraint fkcodDoador foreign key(codDoador) references Doador(codDoador),
-	matricula int not null,
-	constraint fkMatriculaFun foreign key(matricula) references Funcionario(matricula),
-	codDoacao int not null,
-	constraint fkcodDoacaoFun foreign key(codDoacao) references Doacao(codDoacao)
 )
 
 create table curriculo(

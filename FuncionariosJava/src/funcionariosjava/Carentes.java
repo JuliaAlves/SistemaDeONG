@@ -58,4 +58,21 @@ public class Carentes {
         return carente;
     }
     
+    public void Doacao (double v, int cod, String d)throws Exception{
+        if(v<0)
+            throw new Exception("Não pode doar valor negativo");
+        try{
+            String sql= "INSERT INTO DoacaoCarente VALUES (?,?,?)";
+            DAOs.getBD().prepareStatement(sql);
+            DAOs.getBD().setInt(1, cod);
+            DAOs.getBD().setDouble(2, v);
+            DAOs.getBD().setString(3, d);
+            DAOs.getBD().executeUpdate();
+            DAOs.getBD().commit();          
+        }
+        catch(SQLException erro){
+            throw new Exception("Erro ao transferir doacao");
+        }
+    }
+    
 }

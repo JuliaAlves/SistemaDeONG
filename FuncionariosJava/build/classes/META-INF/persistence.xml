@@ -5,6 +5,7 @@
     <class>funcionariosjava.Funcionario</class>
     <class>funcionariosjava.UsuarioFuncionarios</class>
     <class>funcionariosjava.Carente</class>
+    <class>funcionariosjava.Doacoes</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://regulus:1433;databaseName=BDGRUPO12"/>
       <property name="javax.persistence.jdbc.user" value="BDGRUPO12"/>

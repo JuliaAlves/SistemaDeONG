@@ -14,9 +14,10 @@ if (isset($_POST['login'])) {
 	    }
 	    else{
 	    	$_SESSION['usuario']=$dados[0]['login'];
-	    	header('Location:home.php?');
+	    	header('Location:home.php');
 	    	$_SESSION['logado']="SIM";
-	    	   	$_SESSION['opcao']=$dados[2];
+	    	 $_SESSION['opcao']=$dados[2];
+	    	 echo $dados[2];
 	    }	    
 }
 ?>

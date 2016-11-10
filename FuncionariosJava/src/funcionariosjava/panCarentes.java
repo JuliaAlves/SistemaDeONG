@@ -6,6 +6,7 @@
 package funcionariosjava;
 
 import java.sql.SQLException;
+import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -112,14 +113,19 @@ Carentes dao;
         jLabel9.setText("Doações Recebidas");
 
         txtNomeCarente.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        txtNomeCarente.setEnabled(false);
 
         txtTelefoneCarente.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        txtTelefoneCarente.setEnabled(false);
 
         txtRendaCarente.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        txtRendaCarente.setEnabled(false);
 
         txtRGCarente.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        txtRGCarente.setEnabled(false);
 
         txtEmailCarente.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        txtEmailCarente.setEnabled(false);
 
         lblNumeroDoacao.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         lblNumeroDoacao.setText("jLabel10");
@@ -249,7 +255,26 @@ Carentes dao;
     }//GEN-LAST:event_cbxCarentesActionPerformed
 
     private void btnDoarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoarActionPerformed
-        
+        String valor=JOptionPane.showInputDialog("Qual valor?");
+        if (valor == null || valor.equals("")) 
+            JOptionPane.showMessageDialog(this, "Operação cancelada", 
+                                         "ONG", JOptionPane.ERROR_MESSAGE);
+        else {  
+            try {
+            Calendar cal = Calendar.getInstance();
+            int day = cal.get(Calendar.DATE);
+            int month = cal.get(Calendar.MONTH)+1;
+            int year = cal.get(Calendar.YEAR);
+            String data=""+day+"/"+month+"/"+year;
+
+                dao.Doacao(Double.parseDouble(valor),cbxCarentes.getSelectedIndex(),data);
+                JOptionPane.showMessageDialog(this, "Doacao transferida!", 
+                                             "ONG", JOptionPane.ERROR_MESSAGE);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                Logger.getLogger(panCarentes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }//GEN-LAST:event_btnDoarActionPerformed
 
 
