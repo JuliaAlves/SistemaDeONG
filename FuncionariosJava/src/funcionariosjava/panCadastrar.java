@@ -14,7 +14,7 @@ private Funcionarios dao;
     /**
      * Creates new form panCadastrar
      */
-    public panCadastrar() {
+    public panCadastrar(Funcionario f) {
         initComponents();
         dao = new Funcionarios();
 
@@ -25,6 +25,12 @@ private Funcionarios dao;
        {
         MeuResultSet resultado=dao.selecionaUltimo();
         txtMatricula.setText("" + (resultado.getInt("matricula")+1));
+        txtNome.setText("");
+        txtRG.setText("");
+        txtEndereco.setText("");
+        txtCPF.setText("");
+        txtSenhaProv.setText("");
+        txtTelefone.setText("");
        }
        catch(Exception erro){
            erro.printStackTrace();
@@ -170,7 +176,7 @@ private Funcionarios dao;
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-       /* try{
+       try{
             Funcionario func;
 
             func = new Funcionario(Integer.parseInt(txtMatricula.getText()), txtNome.getText(),
@@ -181,12 +187,12 @@ private Funcionarios dao;
             throw new Exception("Informações já cadastradas");
 
             dao.novoFuncionario(func);
+            atualizar();
         }
-        catch(Exception erro){
-            erro.printStackTrace();
+        catch(Exception erro){ 
             javax.swing.JOptionPane.showMessageDialog(this, erro,
-                this.getTitle(), javax.swing.JOptionPane.ERROR_MESSAGE);
-        }*/
+                "ONG", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
 

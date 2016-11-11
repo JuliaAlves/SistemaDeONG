@@ -12,6 +12,12 @@ import java.sql.*;
  * @author u16182
  */
 public class Funcionarios {
+
+    /**
+     * 
+     * @param func
+     * @throws Exception
+     */
     public void novoFuncionario (Funcionario func) throws Exception
     {
         if (func==null)
@@ -35,7 +41,7 @@ public class Funcionarios {
             DAOs.getBD().setString (7, func.getSenha());
 
             DAOs.getBD().executeUpdate ();
-            
+            DAOs.getBD().commit();            
         }
         catch (SQLException erro)
         {
@@ -131,13 +137,28 @@ public class Funcionarios {
             DAOs.getBD().prepareStatement(sql);
             DAOs.getBD().setInt(1, matr);
             resultado = (MeuResultSet)DAOs.getBD().executeQuery();
+            resultado.first();
         }
         catch(Exception erro)
         {
             erro.printStackTrace();
             throw new Exception("Erro ao selecionar matricula");
         }
-        resultado.first();
         return resultado;
+    }
+    
+    public void alterarSenha(String novaSenha, int mat){
+        System.out.println(mat);
+        try {
+            String sql= "UPDATE Funcionario SET Senha=? WHERE matricula=?";
+            DAOs.getBD().prepareStatement(sql);
+            DAOs.getBD().setString(1, novaSenha);
+            DAOs.getBD().setInt(2, mat);
+            DAOs.getBD().executeUpdate();
+            DAOs.getBD().commit();
+        }
+        catch(Exception erro){
+            erro.printStackTrace();
+        }
     }
 }

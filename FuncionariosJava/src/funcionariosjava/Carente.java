@@ -2,7 +2,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+*/
 package funcionariosjava;
 
 import java.io.Serializable;
@@ -21,109 +21,74 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author u16182
  */
-@Entity
-@Table(name = "Funcionario")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Funcionario.findAll", query = "SELECT f FROM Funcionario f"),
-    @NamedQuery(name = "Funcionario.findByMatricula", query = "SELECT f FROM Funcionario f WHERE f.matricula = :matricula"),
-    @NamedQuery(name = "Funcionario.findByNome", query = "SELECT f FROM Funcionario f WHERE f.nome = :nome"),
-    @NamedQuery(name = "Funcionario.findByEndereco", query = "SELECT f FROM Funcionario f WHERE f.endereco = :endereco"),
-    @NamedQuery(name = "Funcionario.findByRg", query = "SELECT f FROM Funcionario f WHERE f.rg = :rg"),
-    @NamedQuery(name = "Funcionario.findByCpf", query = "SELECT f FROM Funcionario f WHERE f.cpf = :cpf"),
-    @NamedQuery(name = "Funcionario.findByTelefone", query = "SELECT f FROM Funcionario f WHERE f.telefone = :telefone")})
-public class Funcionario implements Serializable {
+public class Carente implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @Id
-    @Basic(optional = false)
-    @Column(name = "matricula")
-    private Integer matricula;
     @Basic(optional = false)
     @Column(name = "nome")
     private String nome;
-    @Basic(optional = false)
-    @Column(name = "endereco")
-    private String endereco;
     @Basic(optional = false)
     @Column(name = "RG")
     private String rg;
     @Basic(optional = false)
     @Column(name = "CPF")
-    private String cpf;
+    private String email;
     @Basic(optional = false)
     @Column(name = "telefone")
     private String telefone;
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "funcionario")
-    private String senha;
+    private String renda;
 
 
-    public Funcionario() {
-    }
 
-    public Funcionario(Integer matricula) {
-        this.matricula = matricula;
-    }
-
-    public Funcionario(Integer matricula, String nome, String endereco, String rg, String cpf, String telefone, String senha) {
-        this.matricula = matricula;
+    public Carente(String nome, String rg, String email, String telefone, String renda) {
         this.nome = nome;
-        this.endereco = endereco;
         this.rg = rg;
-        this.cpf = cpf;
+        this.email = email;
         this.telefone = telefone;
-        this.senha=senha;
+        this.renda=renda;
     }
 
-    public int getMatricula() {
-        return this.matricula;
-    }
     
-    public String getSenha(){
-      return this.senha;
+    public String getRenda(){
+      return this.renda;
     }
        
-    public void setSenha(String s)throws Exception{
+    public void setRenda(String s)throws Exception{
         if (s==null)
          throw new Exception("Parametro nulo");
 
-       this.senha=s;
-    }
-
-    public void setMatricula(Integer matricula) {
-        this.matricula = matricula;
+       this.renda=s;
     }
 
     public String getNome() {
         return this.nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(String nome) throws Exception{
+        if (nome==null)
+         throw new Exception("Parametro nulo");
         this.nome = nome;
-    }
-
-    public String getEndereco() {
-        return this.endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
     }
 
     public String getRG() {
         return this.rg;
     }
 
-    public void setRG(String rg) {
+    public void setRG(String rg) throws Exception {
+        if (rg==null)
+         throw new Exception("Parametro nulo");
         this.rg = rg;
     }
 
-    public String getCPF() {
-        return this.cpf;
+    public String getEmail() {
+        return this.email;
     }
 
-    public void setCPF(String cpf) {
-        this.cpf = cpf;
+    public void setEmail(String email) throws Exception{
+        if (email==null)
+         throw new Exception("Parametro nulo");
+        this.email = email;
     }
 
     public String getTelefone() {
@@ -131,13 +96,14 @@ public class Funcionario implements Serializable {
     }
 
     public void setTelefone(String telefone)throws Exception{
-        if(telefone==null)
-            throw new Exception("Paremetro nulo");
+        if (email==null)
+         throw new Exception("Parametro nulo"); 
+        
         this.telefone = telefone;
     }
 
-    @Override
-    public int hashCode() {
+   /*  @Override
+   public int hashCode() {
         int hash = 0;
         hash += (matricula != null ? matricula.hashCode() : 0);
         return hash;
@@ -160,5 +126,5 @@ public class Funcionario implements Serializable {
     public String toString() {
         return "funcionariosjava.Funcionario[ matricula=" + matricula + " ]";
     }
-    
+    */
 }

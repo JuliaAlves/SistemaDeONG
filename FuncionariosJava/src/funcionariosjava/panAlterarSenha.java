@@ -5,29 +5,43 @@
  */
 package funcionariosjava;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author u16182
  */
 public class panAlterarSenha extends javax.swing.JPanel {
     private Funcionarios dao;
+    private Funcionario func;
     /**
      * Creates new form panAlterarSenha
      * @param matricula
      */
-    public panAlterarSenha(int matricula) {
+    public panAlterarSenha(Funcionario f) throws Exception {
         initComponents();
         dao = new Funcionarios();
+        if (f == null)
+            throw new Exception("Parametro nulo");
+        
+        this.func=f;
+        
         try{
-            MeuResultSet resultado=dao.getFuncionario(matricula);
-            txtMatriculaSenha.setText(""+resultado.getInt("matricula"));
-            txtNomeSenha.setText(resultado.getString("nome"));
+            txtMatriculaSenha.setText(""+this.func.getMatricula());
+            txtNomeSenha.setText(this.func.getNome());
         }
         catch(Exception erro){
-           erro.printStackTrace();
+           throw new Exception("Erro ao verificar funcionario");
         }
     }
-
+    
+    public void atualizar(){
+        txtCSenhaNova.setText("");
+        txtSenhaNova.setText("");
+    }
+            
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -65,6 +79,11 @@ public class panAlterarSenha extends javax.swing.JPanel {
         label11.setText("Confirmar Senha");
 
         btnConfirmar.setText("Confirmar");
+        btnConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfirmarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -117,6 +136,20 @@ public class panAlterarSenha extends javax.swing.JPanel {
                 .addContainerGap(29, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+/*
+    private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
+*/
+    private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {
+        if (txtSenhaNova.getText().equals(txtCSenhaNova.getText())){
+            dao.alterarSenha(txtSenhaNova.getText(),this.func.getMatricula() );
+            JOptionPane.showMessageDialog(this, "Sua senha foi alterada!", "ONG", JOptionPane.ERROR_MESSAGE);
+            atualizar();
+        }
+        else
+            JOptionPane.showMessageDialog(this, "As senhas estão diferentes", "ONG", JOptionPane.ERROR_MESSAGE);
+        
+        
+    }//GEN-LAST:event_btnConfirmarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
