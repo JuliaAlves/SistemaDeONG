@@ -16,8 +16,18 @@ if (isset($_POST['login'])) {
 	    	$_SESSION['usuario']=$dados[0]['login'];
 	    	header('Location:home.php');
 	    	$_SESSION['logado']="SIM";
-	    	 $_SESSION['opcao']=$dados[2];
-	    	 echo $dados[2];
+
+	    	$dados=$obj_con->select("SELECT * FROM UsuarioDoador WHERE login='".$logForm."'");
+			if(empty($dados)){
+				$dados=$obj_con->select("SELECT * FROM UsuarioVoluntario WHERE login='".$logForm."'");
+				if(empty($dados))
+					$_SESSION['opcao']="Carente";
+				else 
+					$_SESSION['opcao']="Voluntario";
+			}
+			else 
+				$_SESSION['opcao']="Doador";
 	    }	    
+
 }
 ?>
