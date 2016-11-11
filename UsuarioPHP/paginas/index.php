@@ -1,5 +1,7 @@
 <?php
     session_start();
-    require_once 'menu.inc.php';
-    require_once 'home.php';
+    $_SESSION['logado']="NAO";
+    include "home.php";
+
+
 ?>

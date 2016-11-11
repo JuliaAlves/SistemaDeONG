@@ -13,6 +13,7 @@ body{
 
 
 
+
 .clear:after{
 	content:"."; 
 	display:block; 
@@ -69,10 +70,9 @@ img{
 .slide{
 	position: relative;
     display: none;
-    width: 285.4%;
+    width: 286%;
     height: 200%;
 	top: 50%;
-    left:5%;
 }
 
 .slide-container
@@ -175,6 +175,11 @@ label{
 	height: 20em !important;
 }
 
+#perfil2{
+	position: absolute;
+    margin-top: 2%;
+    margin-left: 24%;
+}
 
 /*----------------------------------------------HTML 5 Overrides-------------------------------------*/
 
@@ -253,3 +258,6 @@ blockquote:after, q:after{content:' „'; font-size:26px; line-height:0;}
 
 #footer{padding:20px 0;}
 #footer p{margin:0; padding:0;}
+.tHome{
+	color:#FF9900; 
+}

@@ -6,17 +6,17 @@ if (isset($_POST['login'])) {
     $logForm = $_POST['login'];
     $senForm = $_POST['senha'];
     
-    $obj_con = new Conexao('regulus', 'BDGRUPO12', 'BDGRUPO12', 'BDGRUPO12');
-    
-    $dados = $obj_con->select($logForm, $senForm);
-    
-    $_SESSION['opcao']=$dados[2];
-    
-	    if(empty($dados))
-	    	header('Location:index.php?usuario=NOK');
+    $obj_con = new Conexao;
+    $dados = $obj_con->select("SELECT * FROM Usuario WHERE login='".$logForm."' AND senha='".$senForm."'");
+        
+	    if(empty($dados)){
+	    	header('Location:login.php?cadastro="NAO"');
+	    }
 	    else{
 	    	$_SESSION['usuario']=$dados[0]['login'];
-	    	header('Location:usuario.php');
+	    	header('Location:home.php?');
+	    	$_SESSION['logado']="SIM";
+	    	$_SESSION['opcao']=$dados[2];
 	    }	    
 }
 ?>

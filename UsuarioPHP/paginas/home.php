@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
-<?php require_once 'menu.inc.php' ?>
+<?php 
+include 'menu.inc.php'; 
+
+?>
+
 <div class="wrapper row2">
   <div id="container" class="clear">
     <div class="slide-container">
@@ -52,10 +56,8 @@
   </div>
 </div>
 
-<div class="wrapper row3">
-  <footer id="footer" class="clear">
-    <p class="fl_left">Copyright &copy; 2016 - Todos os direitos reservados - <a href="home.php">Amigos do Bem</a></p>
-  </footer>
-</div>
+      <?php
+          include "footer.inc.php";
+        ?>
 </body>
 </html>
